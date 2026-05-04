@@ -3,7 +3,7 @@ import axios from "axios";
 import { Link, Navigate, Route, Routes } from "react-router-dom";
 import "./App.css";
 
-const API_URL = "http://localhost:5001/api/assignments";
+const API_URL = "http://localhost:5000/api/assignments";
 
 function PlannerPage({
     assignments,

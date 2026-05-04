@@ -1,26 +1,29 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const cors = require("cors"); 
+const cors = require("cors");
 const assignmentRoutes = require("./routes/assignments");
+const courseRoutes = require("./routes/courses");
 require("dotenv").config();
 
 const app = express();
 
 app.use(cors());
 app.use(express.json());
+
 app.use("/api/assignments", assignmentRoutes);
+app.use("/api/courses", courseRoutes);
 
 app.get("/", (req, res) => {
-    res.send("API is running...");
+  res.send("Student To-Do Planner API is running...");
 });
 
 mongoose
-    .connect(process.env.MONGO_URI)
-    .then(() => console.log("MongoDB connected"))
-    .catch((err) => console.log("MongoDB error:", err));
+  .connect(process.env.MONGO_URI)
+  .then(() => console.log("MongoDB connected"))
+  .catch((err) => console.log("MongoDB error:", err));
 
-const PORT = process.env.PORT || 5001;
+const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
+  console.log(`Server running on port ${PORT}`);
 });
