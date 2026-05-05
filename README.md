@@ -130,5 +130,5 @@ YouTube Video Link: `[link]`
 |---|---|
 | Jose Torres-Gomez | Frontend development, README |
 | Mako Chirisa | Frontend development and styling |
-| Cole Puls | Backend development, models, routes, and README |
+| Cole Puls | Backend development, README |
 | Graham Roesel | Backend development, Presentation |
